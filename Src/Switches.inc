@@ -1,0 +1,4 @@
+// Global Switches
+
+{$define Trace}
+

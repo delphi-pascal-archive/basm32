@@ -1,0 +1,74 @@
+BASM v0.5- Win32 assembler.
+
+
+Labels:
+========
+Labels are used to determine the offset of the next defined instruction or data within the current segment.
+Labels are started with an alphabetic word.
+All labels are global, are not case sensitive and duplicate labels are not allowed.
+
+Numeric Constants
+====================
+Numeric constants can be written in multiple bases: Decimal, Hexadecimal, Octal and binary base.
+ ex.
+	100	; Decimal 
+	100h	; Hexadecimal 
+	100o	; Octal
+	100b	; Binary
+ ==>       16 = 10h = 20o = 10000b
+
+Comments:
+==========
+ Comments start with a semi-colon ";" and end when the end of the line has been reached.
+
+Expressions:
+=============
+ Expressions can be formed by the following operators: 
+	"OR"	bitwise OR 
+	"XOR"	bitwise XOR 
+	"AND"	bitwise AND 
+	"SHL"	Left Shift
+	"SHR"	Right Shift
+	"+"	Addition
+	"-"	Subtraction
+	"*"	multiplication
+
+DIRECTIVES:
+============
+
+DIRECTIVE "DB":
+================
+ Define byte data values
+
+DIRECTIVE "DW:
+===============
+ Define word data values
+
+DIRECTIVE "DD":
+================
+ Define dword data values
+
+DIRECTIVE "ORG":
+=================
+ The current offset can be changed with the ORG directive.
+
+
+DIRECTIVE "INCLUDE":
+=====================
+ include a source file to the current one.
+
+DIRECTIVE "EXTERN":
+====================
+ Declare a label as externel from other module
+
+DIRECTIVE "PUBLIC":
+====================
+ declare public label
+
+DIRECTIVE "IMPORT":
+====================
+ import label from library
+
+DIRECTIVE "ALIGN":
+===================
+ align current segment 
